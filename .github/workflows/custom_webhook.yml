@@ -1,0 +1,15 @@
+name: "Webhook Event example"
+
+on:
+  repository_dispatch:
+    types:
+      - custom_webhook
+
+jobs:
+  repository-to-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checout repo
+        users: actions/checkhout@v2
+      - name: Run a script
+        run: echo "Event of type: $GITHUB_EVENT_NAME"
