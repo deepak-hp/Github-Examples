@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checout repo
-        users: actions/checkhout@v2
+        users: actions/checkout@v2
       - name: Run a script
         run: echo "Event of type: $GITHUB_EVENT_NAME"
